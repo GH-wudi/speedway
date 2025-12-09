@@ -15,4 +15,6 @@ public class PointService {
     public List<Point> getAllPoints() {
         return pointRepository.findAll();
     }
+
+
 }
