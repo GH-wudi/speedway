@@ -1,0 +1,35 @@
+spatial-demo/                           <-- 项目根目录
+├── pom.xml                             <-- Maven 依赖配置文件
+├── src/
+│   ├── main/
+│   │   ├── java/
+│   │   │   └── com/
+│   │   │       └── example/
+│   │   │           └── spatialdemo/
+│   │   │               ├── SpatialDemoApplication.java       <-- [1] Spring Boot 启动类
+│   │   │               │
+│   │   │               ├── controller/                       <-- [2] 控制层：接收前端请求
+│   │   │               │   └── StationController.java
+│   │   │               │
+│   │   │               ├── service/                          <-- [3] 业务层：逻辑处理、格式转换
+│   │   │               │   └── StationService.java
+│   │   │               │
+│   │   │               ├── repository/                       <-- [4] 持久层：MySql 数据库交互
+│   │   │               │   └── StationRepository.java
+│   │   │               │
+│   │   │               ├── entity/                           <-- [5] 实体类：对应数据库表结构
+│   │   │               │   └── ChargingStation.java
+│   │   │               │
+│   │   │               └── dto/                              <-- [6] 数据传输对象：定义 GeoJSON 结构
+│   │   │                   ├── GeoJsonFeatureCollection.java
+│   │   │                   ├── GeoJsonFeature.java
+│   │   │                   └── GeoJsonGeometry.java
+│   │   │
+│   │   └── resources/
+│   │       ├── application.yml         <-- [7] 项目配置文件 (数据库连接等)
+│   │       ├── static/                 <-- 静态资源 (可选，如需存放简单的前端页面)
+│   │       └── templates/              <-- 模板文件 (可选)
+│   │
+│   └── test/                           <-- 测试代码目录
+│       └── java/
+│           └── ...
